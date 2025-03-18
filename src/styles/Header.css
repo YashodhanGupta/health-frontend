@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  justify-content: space-between; /* Space between logo & nav items */
+  align-items: center; /* Ensures vertical alignment */
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.nav-links a:hover, 
+.nav-links .book-appointment-link:hover, 
+.nav-links .login-link:hover {
+  color: #ffcc00;
+}
+.logout-btn {
+  background: red;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: white;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center; /* Ensures button aligns properly */
+}
+.logout-btn:hover {
+  background: darkred;
+}
+
+/* ✅ When scrolling, slightly darken the background */
+.header.scrolled {
+  background: rgba(0, 123, 255, 0.8);
+  backdrop-filter: blur(15px);
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center; /* Ensures all items align properly */
+  gap: 20px; /* Maintain spacing */
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* ✅ Ensure the login button is visible */
+.login-btn {
+  background-color: #ffcc00;
+  color: black;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #ff9900;
+}
+
+/* ✅ Responsive: Adjust for smaller screens */
+@media (max-width: 768px) {
+  .header {
+      padding: 10px 15px;
+  }
+  
+  .nav-links {
+      gap: 10px;
+  }
+  
+  .nav-links a {
+      font-size: 16px;
+  }
+  
+  .login-btn {
+      font-size: 14px;
+      padding: 6px 10px;
+  }
+}

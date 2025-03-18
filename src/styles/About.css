@@ -1,0 +1,122 @@
+/* Global Styling */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Container Styling */
+.container {
+    margin-top: 50px;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Section Title */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Cool Underline Effect for Titles */
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #3498db;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Paragraph Styling - Justified */
+.container p {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Doctor Cards Container */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+/* Doctor Card Styling */
+.project-card {
+    width: 100%;
+    max-width: 350px;
+    height: 350px; /* Set fixed height for equal-sized cards */
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+    /* Ensure equal content distribution */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Doctor Image */
+.project-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3498db;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+.project-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+/* Doctor Name */
+.project-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+/* Doctor Specialty */
+/* Doctor Specialty */
+.project-languages {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 card per row on small screens */
+    }
+}

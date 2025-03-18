@@ -1,0 +1,22 @@
+.doctor-dashboard {
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.doctor-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.doctor-nav button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.doctor-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+}

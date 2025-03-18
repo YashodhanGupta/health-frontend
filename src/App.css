@@ -1,0 +1,17 @@
+body {
+  background-color: #f3f4f6;
+  color: black; /* Ensures text is readable */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+body, html {
+  overflow-x: hidden; /* Hides horizontal scrollbar */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* Enable smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}

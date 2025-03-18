@@ -1,0 +1,162 @@
+/* Dashboard container */
+.dashboard-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Button container */
+.button-container {
+    margin-bottom: 20px;
+    padding-top: 80px;
+}
+
+.button-container button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.button-container button:first-child {
+    background-color: #007bff;
+    color: white;
+}
+
+.button-container button:last-child {
+    background-color: #28a745;
+    color: white;
+}
+
+.button-container button:hover {
+    opacity: 0.8;
+}
+
+/* Doctors container */
+.doctors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    
+}
+
+/* Doctor card */
+.doctor-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.book-btn:hover {
+    background: #218838;
+}
+
+/* Appointments container */
+.appointments-container {
+    margin-top: 20px;
+}
+
+/* Appointment card */
+.appointment-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.cancel-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.cancel-btn:hover {
+    background: #c82333;
+}
+/* Style for doctor and appointment grid */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Style for individual cards */
+.doctor-card, .appointment-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.doctor-card:hover, .appointment-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 card per row on smaller screens */
+    }
+}
+/* Ensure bullet points for doctor availability list */
+.doctor-card ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 20px; /* Indents bullets properly */
+    margin: 10px 0; /* Adds spacing */
+}
+
+/* Style individual list items */
+.doctor-card li {
+    display: flex;
+    justify-content: space-between; /* Keeps time and button separate */
+    align-items: center;
+    padding: 8px 0;
+    position: relative; /* Needed for proper bullet placement */
+}
+
+/* Manually force the bullet to appear */
+.doctor-card li::before {
+    content: "•"; /* Unicode bullet character */
+    color: black; /* Bullet color */
+    font-size: 1.2rem;
+    position: absolute;
+    left: -15px; /* Adjusts bullet positioning */
+}
