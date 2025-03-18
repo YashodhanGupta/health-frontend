@@ -53,14 +53,15 @@ const Header = () => {
             </div>
             <nav className="nav-links">
                 {/* Show these links ONLY if the user is NOT an admin */}
-                {userRole !== "admin" && (
-                    <>
-                        <a href="#home" onClick={handleHomeClick}>Home</a>
-                        <a href="#about" onClick={handleAboutClick}>About</a>
-                        <Link to="/patient-dashboard" className="book-appointment-link">Book an Appointment</Link>
-                        <a href="#contact" onClick={handleContactClick}>Contact</a>
-                    </>
-                )}
+                {(userRole !== "admin" && userRole !== "doctor") && (
+    <>
+        <a href="#home" onClick={handleHomeClick}>Home</a>
+        <a href="#about" onClick={handleAboutClick}>About</a>
+        <Link to="/patient-dashboard" className="book-appointment-link">Book an Appointment</Link>
+        <a href="#contact" onClick={handleContactClick}>Contact</a>
+    </>
+)}
+
 
                 {/* Always show Logout button when logged in */}
                 <div className="auth-placeholder">

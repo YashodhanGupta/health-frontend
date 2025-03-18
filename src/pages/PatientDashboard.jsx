@@ -52,7 +52,7 @@ const PatientDashboard = () => {
             setShowAppointments(true);
         } catch (error) {
             console.error("Error fetching appointments:", error);
-            alert("Failed to fetch appointments. Please try again.");
+            alert("You don't have any appointments.");
         }
     };
 
@@ -62,7 +62,7 @@ const PatientDashboard = () => {
             const response = await axios.delete(`https://health-backend-3zzb.onrender.com/api/appointments/${appointmentId}`);
     
             if (response.status === 200) {
-                alert("Appointment canceled successfully!");
+                alert("Appointment cancelled successfully!");
     
                 // Update UI by filtering out deleted appointment
                 setAppointments((prevAppointments) =>

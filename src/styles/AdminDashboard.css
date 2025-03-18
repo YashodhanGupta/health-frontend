@@ -16,7 +16,7 @@ th, td {
 }
 
 th {
-    background-color: #f4f4f4;
+    background-color: #eeebeb;
 }
 
 button {
@@ -43,4 +43,7 @@ button:last-child {
 #delete-button{
     background-color: red;
     color: white;   
+}
+#approve-button{
+    background-color: #4CAF50;
 }

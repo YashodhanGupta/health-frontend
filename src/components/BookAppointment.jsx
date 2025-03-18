@@ -35,7 +35,7 @@ const BookAppointment = () => {
                 icon: "success",
                 confirmButtonText: "OK",
             }).then(() => {
-                navigate("/"); // ✅ Redirect to dashboard after clicking OK
+                navigate("/patient-dashboard"); // ✅ Redirect to dashboard after clicking OK
             });
 
         } catch (error) {

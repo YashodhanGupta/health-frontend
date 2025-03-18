@@ -13,7 +13,7 @@ const AppointmentList = () => {
   const cancelAppointment = (id) => {
     axios.delete(`https://health-backend-3zzb.onrender.com/api/appointments/${id}`)
       .then(() => {
-        alert("Appointment canceled successfully!");
+        alert("Appointment cancelled successfully!");
         setAppointments(appointments.filter((appt) => appt._id !== id));
       })
       .catch((err) => console.error(err));
